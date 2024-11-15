@@ -1,0 +1,339 @@
+/* Navigation Bar Styles */
+#navbar {
+    position: fixed; /* Make the navbar fixed to the top */
+    top: 0; /* Position it at the top of the viewport */
+    right: 20px; /* Keep it on the right side */
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    border: 2px solid var(--hacker-green); /* Green glowing border */
+    box-shadow: 0 0 10px var(--hacker-green); /* Green glowing shadow */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Navigation Content */
+.nav-content {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex; /* Flexbox for links */
+    gap: 15px; /* Space between links */
+}
+
+.glow-link {
+    color: var(--hacker-green); /* Green color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Bold font */
+    text-shadow: 0 0 10px var(--hacker-green); /* Glowing effect */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+/* Hover Effect for Links */
+.glow-link:hover {
+    color: white; /* Change to white on hover */
+}
+
+/* Divider Line */
+.nav-divider {
+    height: 1px; /* Height of the line */
+    background-color: var(--hacker-green); /* Green color for the divider */
+    margin: 10px 0; /* Margin around the line */
+}
+
+/* Text below the divider */
+.nav-text {
+    color: white; /* White text color */
+    font-size: 14px; /* Smaller font size */
+    text-align: center; /* Center the text */
+}
+/* Add this CSS rule for smooth scrolling */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 50px 0;
+}
+
+/* Neon Green Glow Color */
+:root {
+    --hacker-green: #00ff00;
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjust this height as needed */
+    background-image: url('path/to/your/background-image.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    border: 5px solid var(--hacker-green); /* Green glowing border */
+    box-shadow: 0 0 20px var(--hacker-green); /* Green glowing shadow */
+}
+
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.top-image {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid var(--hacker-green);
+    box-shadow: 0 0 20px var(--hacker-green);
+    width: 200px;
+    height: auto;
+}
+
+.main-image {
+    border: 5px solid var(--hacker-green);
+    box-shadow: 0 0 20px var(--hacker-green);
+    width: 400px;
+    height: auto;
+}
+
+.links {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.glow-link {
+    color: var(--hacker-green);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 0 0 10px var(--hacker-green);
+    border: 2px solid var(--hacker-green);
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.glow-link:hover {
+    background-color: var(--hacker-green);
+    color: black;
+    box-shadow: 0 0 30px var(--hacker-green);
+}
+
+/* Divider with scrolling text */
+#divider {
+    background-color: black;
+    border: 5px solid var(--hacker-green);
+    box-shadow: 0 0 20px var(--hacker-green);
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-banner {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.scrolling-banner p {
+    color: var(--hacker-green);
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+    text-shadow: 0 0 10px var(--hacker-green);
+}
+
+/* About Us Section */
+#about-us {
+    text-align: center;
+    background-color: black; /* Background color for About Us */
+    border: 5px solid var(--hacker-green); /* Green glowing border */
+    box-shadow: 0 0 20px var(--hacker-green); /* Green glowing shadow */
+    padding: 50px 0; /* Padding for the section */
+}
+
+.glow-title {
+    color: var(--hacker-green);
+    text-shadow: 0 0 15px var(--hacker-green);
+    font-size: 36px;
+    margin-bottom: 40px; /* Space below title */
+}
+
+.container-wrapper {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row; /* Align containers horizontally */
+    justify-content: center; /* Center containers in the row */
+    gap: 50px; /* Space between containers */
+}
+
+.container {
+    width: 300px; /* Fixed width for each container */
+    padding: 20px; /* Padding inside each container */
+    border: 5px solid var(--hacker-green); /* Green border for containers */
+    box-shadow: 0 0 20px var(--hacker-green); /* Green glowing shadow */
+}
+
+.mini-title {
+    color: var(--hacker-green);
+    text-shadow: 0 0 10px var(--hacker-green);
+    font-size: 20px;
+    margin-bottom: 10px; /* Space below mini-title */
+}
+
+.container p {
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for paragraph */
+    text-align: center; /* Center text */
+}
+
+
+/* $DEGAI Scrolling Banner */
+#degen-banner {
+    background-color: black;
+    border: 5px solid var(--hacker-green);
+    box-shadow: 0 0 20px var(--hacker-green);
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-degen-banner {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll-degen-text 5s linear infinite;
+}
+
+@keyframes scroll-degen-text {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.scrolling-degen-banner p {
+    color: var(--hacker-green);
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+    text-shadow: 0 0 10px var(--hacker-green);
+}
+
+/* Degen AI Intelligence Section */
+#degen-ai {
+    text-align: center;
+    background-color: black;
+    border: 5px solid var(--hacker-green);
+    box-shadow: 0 0 20px var(--hacker-green);
+}
+
+.hacker-simulator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#hacker-input {
+    width: 600px;
+    height: 200px;
+    background-color: black;
+    color: var(--hacker-green);
+    border: 5px solid var(--hacker-green);
+    box-shadow: 0 0 20px var(--hacker-green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+#hacker-input::placeholder {
+    color: var(--hacker-green);
+    opacity: 0.7;
+}
+/* Scrolling Banner Divider for DEGAINOMICS */
+#degainomics-divider {
+    background-color: black; /* Adjust the color as needed */
+    border: 5px solid var(--hacker-green); /* Green glowing border */
+    box-shadow: 0 0 20px var(--hacker-green); /* Green glowing shadow */
+    height: 30px; /* Short height for the divider */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Short Banner Style */
+.short-banner {
+    text-align: center;
+}
+
+.short-banner p {
+    color: var(--hacker-green); /* Text color */
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    text-shadow: 0 0 10px var(--hacker-green); /* Glowing effect */
+}
+
+/* DEGAINOMICS Section */
+#degainomics {
+    text-align: center; /* Center text in the section */
+    background-color: black; /* Background color for DEGAINOMICS */
+    border: 5px solid var(--hacker-green); /* Green glowing border */
+    box-shadow: 0 0 20px var(--hacker-green); /* Green glowing shadow */
+    padding: 20px; /* Add some padding */
+}
+
+.degcontainer-wrapper {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Vertically align containers */
+    align-items: center; /* Center items */
+    margin-top: 20px; /* Space above */
+}
+
+.degcontainer {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    color: white; /* Text color */
+    padding: 15px; /* Padding inside each container */
+    margin: 10px 0; /* Vertical spacing */
+    border: 3px solid var(--hacker-green); /* Green border for containers */
+    box-shadow: 0 0 10px var(--hacker-green); /* Green glowing shadow */
+    width: 80%; /* Adjust width as needed */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+
+/* Hover Effect for Containers */
+.degcontainer:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.mini-title {
+    font-weight: 600; /* Bold for mini-title */
+    color: var(--hacker-green); /* Mini-title color */
+    margin: 0 0 10px; /* Spacing below mini-title */
+}
+
+
